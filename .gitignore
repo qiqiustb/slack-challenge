@@ -1,9 +1,9 @@
 logs/*
 !.gitkeep
-node_modules/
-app/bower_components/
+angular-app/node_modules/
+angular-app/app/bower_components/
 tmp
 .DS_Store
 .idea
 manifest.json
-dist/
+angular-app/dist/
