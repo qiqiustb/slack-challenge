@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('myApp.footer', [])
+    .module('slackChallenge.footer', [])
     .controller('FooterController', FooterController);
 
   function FooterController ($scope) {

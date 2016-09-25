@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('myApp.view2', [])
+    .module('slackChallenge.view2', [])
     .controller('View2Ctrl', View2Ctrl);
 
   function View2Ctrl () {

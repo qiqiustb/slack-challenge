@@ -3,14 +3,15 @@
 
   // Declare app level module which depends on views, and components
   angular
-    .module('myApp', [
+    .module('slackChallenge', [
       'ui.router',
-      'myApp.header',
-      'myApp.footer',
-      'myApp.view1',
-      'myApp.view2',
-      'myApp.view3',
-      'myApp.version',
+      'slackChallenge.header',
+      'slackChallenge.footer',
+      'slackChallenge.view1',
+      'slackChallenge.view2',
+      'slackChallenge.summary',
+      'slackChallenge.source',
+      'slackChallenge.version',
       'ui.bootstrap',
     ])
     .config(['$stateProvider', '$urlRouterProvider', config]);
