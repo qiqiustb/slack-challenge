@@ -16,16 +16,12 @@
         <li ui-sref-active="active"><a ui-sref="app.view2">view2<span class="sr-only">(current)</span></a></li>
       </ul>
 
-      <ul class="nav navbar-nav">
-        <li ui-sref-active="active"><a ui-sref="app.view3">view3<span class="sr-only">(current)</span></a></li>
-      </ul>
-
       <!-- Search -->
-      <form class="navbar-form navbar-left" role="search">
+      <form ng-submit="search()" class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input ng-model="searchterm" type="text" class="form-control" placeholder="url">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">Fetch</button>
       </form>
 
     </div><!-- /.navbar-collapse -->
