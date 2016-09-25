@@ -2,21 +2,21 @@
   'use strict';
 
   angular
-    .module('myApp.view1', [])
-    .controller('View1Ctrl', View1Ctrl);
+    .module('slackChallenge.view1', [])
+    .controller('View1Ctrl', ['$scope', '$stateParams', '$http', View1Ctrl]);
 
-  function View1Ctrl ($scope) {
-    $scope.alerts = [
-        { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
-        { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
-    ];
-
-    $scope.addAlert = function() {
-        $scope.alerts.push({msg: 'Another alert!'});
-    };
-
-    $scope.closeAlert = function(index) {
-        $scope.alerts.splice(index, 1);
-    };
+  function View1Ctrl ($scope, $stateParams, $http) {
+    $scope.url = $stateParams.url;
+    if(angular.isDefined($scope.url)){
+    $http({
+      url: '/api/url?url=' + $scope.url,
+      method: 'GET',
+    }).success(function(data){
+      $scope.data = data;
+      $scope.$broadcast('data', $scope.data);
+    }).error(function(error){
+      console.log('error');
+    });
+    }
   };
 })();

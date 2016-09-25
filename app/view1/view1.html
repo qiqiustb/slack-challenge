@@ -1,4 +1,10 @@
-<div ng-controller="View1Ctrl">
-  <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
-  <button class='btn btn-default' ng-click="addAlert()">Add Alert</button>
+<div class="row buffer-top">
+  <div class="col-md-2">
+    <!-- this is for summary bar -->
+    <div ui-view="summary"></div>
+  </div>
+  <div class="col-md-9">
+    <!-- this is for HTML source  -->
+    <div ui-view="source"></div>
+  </div>
 </div>
