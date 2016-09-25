@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <i class="fa fa-bar-chart" aria-hidden="true"></i> Summary
+  </div>
+  <div class="list-group">
+    <li class="list-group-item" ng-click="highlight(tag)" ng-repeat="(tag, count) in summary | orderBy:'toString()'">
+    <span class = "badge">{{count}}</span> <code><{{tag}}></code>
+    </li>
+  </div>
+</div>
