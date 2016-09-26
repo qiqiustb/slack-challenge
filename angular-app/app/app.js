@@ -8,7 +8,6 @@
       'slackChallenge.header',
       'slackChallenge.footer',
       'slackChallenge.view1',
-      'slackChallenge.view2',
       'slackChallenge.summary',
       'slackChallenge.source',
       'slackChallenge.version',
