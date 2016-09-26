@@ -24,7 +24,8 @@ def setup_logging():
 def analyze_url():
     """Parse HTML"""
     url = request.args.get('url')
-    print url
+    if not url.startswith('http'):
+        url = 'http://' + url
     try:
         resp = requests.get(url, verify=False)
         html = resp.text
