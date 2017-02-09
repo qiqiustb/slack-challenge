@@ -1,6 +1,7 @@
 start:
 	docker-compose up
 
+# change1
 test:
 	@echo "Running test for angular app"
 	@echo "TODO"
